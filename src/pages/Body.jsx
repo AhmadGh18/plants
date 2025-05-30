@@ -21,8 +21,8 @@ const Body = () => {
     <div className="relative h-screen w-full font-mainfont overflow-hidden">
       {/* Background Zoom Layer */}
       <div
-        className={`absolute inset-0 bg-cover  bg-fixed z-[-2] transition-transform duration-1000 ${
-          hasScrolled ? "" : "animate-zoom"
+        className={`absolute inset-0 bg-cover   bg-fixed z-[-2] transition-transform duration-1000 ${
+          hasScrolled ? "" : "animate-zoom "
         }`}
         style={{
           backgroundImage: `url(${img2})`,
@@ -68,10 +68,10 @@ const Body = () => {
           transition={{ duration: 1.2, delay: 0.9 }}
           className="flex gap-4"
         >
-          <button className="bg-secondgreen transition hover:!text-[#014C2E] focus:text-[#014C2E]  cursor-pointer text-white p-3 px-6 md:px-12 text-lg rounded-md shadow-md shadow-gray-900  hover-fill-from-bottom2 ">
+          <button className="bg-secondgreen transition hover:!text-[#014C2E] active:text-[#014C2E] md:active:text-white  cursor-pointer text-white p-3 px-6 md:px-12 text-lg rounded-md shadow-md shadow-gray-900  hover-fill-from-bottom2 ">
             Let's Shop
           </button>
-          <button className="bg-white text-secondorimary hover:text-white focus:text-white active:text-white p-3 px-6 md:px-12 md:py-4 text-lg rounded-md shadow-md shadow-gray-900 transition hover-fill-from-bottom">
+          <button className="bg-white text-secondorimary md:active:bg-secondorimary hover:text-white cursor-pointer  active:text-white md:active:text-white p-3 px-6 md:px-12 md:py-4 text-lg rounded-md shadow-md shadow-gray-900 transition hover-fill-from-bottom">
             Learn More
           </button>
         </motion.div>
