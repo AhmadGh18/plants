@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import logo from "../assets/images/fflogo.png";
 import { FaBars, FaTimes } from "react-icons/fa";
 
-const Navbar = () => {
+const Navbar = ({ isblack, isfixed }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -21,11 +21,17 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`w-full fixed top-0 left-0 z-50 transition-colors duration-500 ${
+      className={`w-full  ${
+        isfixed ? "fixed" : "relative"
+      }  top-0 left-0 z-50 transition-colors duration-500 ${
         scrolled
-          ? "bg-black md:text-white text-black shadow-md"
-          : "bg-transparent md:text-white text-black"
-      }`}
+          ? `bg-black ${
+              isblack && "bg-black"
+            }  md:text-white text-black shadow-md`
+          : ` ${
+              isblack ? "bg-black" : "bg-transparent"
+            } md:text-white text-blac`
+      } ${isblack && "bg-black"}`}
     >
       {" "}
       <div className="flex items-center justify-between py-4 px-6 md:px-12">
