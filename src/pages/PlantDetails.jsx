@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import BreadCrumbs from "../components/BreadCrumbs";
 import products from "../data/products";
 
 const PlantDetails = () => {
@@ -24,6 +25,13 @@ const PlantDetails = () => {
   return (
     <div>
       <Navbar isblack={true} isfixed={false} />
+      <BreadCrumbs
+        items={[
+          { label: "Home", path: "/" },
+          { label: "Shop", path: "/shop" },
+          { label: plant.title, path: `/plant/${plant.id}` },
+        ]}
+      />
       <div className="max-w-6xl mx-auto p-6">
         <div className="flex flex-col md:flex-row gap-8">
           <div className="md:w-1/2">
