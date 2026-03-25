@@ -35,49 +35,49 @@ const Contactus = () => {
               <input
                 type="text"
                 placeholder="First Name"
-                className="flex-1 bg-gray-100 p-3 rounded-md outline-none focus:ring-2 ring-green-400 transition"
+                className="flex-1 bg-gray-100 p-3 rounded-md outline-none focus:ring-2 ring-primary transition"
               />
               <input
                 type="text"
                 placeholder="Last Name"
-                className="flex-1 bg-gray-100 p-3 rounded-md outline-none focus:ring-2 ring-green-400 transition"
+                className="flex-1 bg-gray-100 p-3 rounded-md outline-none focus:ring-2 ring-primary transition"
               />
             </div>
 
             <input
               type="email"
               placeholder="Email Address"
-              className="w-full bg-gray-100 p-3 rounded-md outline-none focus:ring-2 ring-green-400 transition"
+              className="w-full bg-gray-100 p-3 rounded-md outline-none focus:ring-2 ring-primary transition"
             />
 
             <input
               type="tel"
               placeholder="Phone Number"
-              className="w-full bg-gray-100 p-3 rounded-md outline-none focus:ring-2 ring-green-400 transition"
+              className="w-full bg-gray-100 p-3 rounded-md outline-none focus:ring-2 ring-primary transition"
             />
 
             <textarea
               placeholder="Enter a message"
-              className="w-full bg-gray-100 p-3 h-28 rounded-md outline-none focus:ring-2 ring-green-400 transition"
+              className="w-full bg-gray-100 p-3 h-28 rounded-md outline-none focus:ring-2 ring-primary transition"
             ></textarea>
             <div className="flex w-[100%] flex-col">
-              <button className="ml-auto px-12  bg-secondprimary p-2 text-white hover:shadow-none transition-all rounded-md text-lg shadow-md shadow-black cursor-pointer">
+              <button className="ml-auto px-12 bg-secondprimary p-2 text-white hover:shadow-none transition-all rounded-md text-lg shadow-md shadow-black cursor-pointer">
                 Submit
               </button>
             </div>
             <div className="mt-6 space-y-2 text-gray-700">
               <p className="flex items-center gap-2">
-                <FaEnvelope className="text-green-500" /> Email us at:{" "}
+                <FaEnvelope className="text-primary" /> Email us at:{" "}
                 <a
                   href="mailto:support@homeparadis.com"
-                  className="underline text-green-600"
+                  className="underline text-primary"
                 >
                   support@homeparadis.com
                 </a>
               </p>
               <p className="flex items-center gap-2">
-                <FaPhone className="text-green-500" /> Call us:{" "}
-                <span className="text-green-600 font-medium">
+                <FaPhone className="text-primary" /> Call us:{" "}
+                <span className="text-primary font-medium">
                   +1 (800) 123-4567
                 </span>
               </p>

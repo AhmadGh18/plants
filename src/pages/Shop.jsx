@@ -52,7 +52,7 @@ const Shop = () => {
                 className={`px-4 py-2 rounded-full text-sm font-medium transition ${
                   selectedCategory === cat
                     ? "bg-secondprimary text-white shadow"
-                    : "bg-green-100 text-secondprimary hover:bg-green-200"
+                    : "bg-secondgreen/10 text-secondprimary hover:bg-secondgreen/20"
                 }`}
               >
                 {cat}

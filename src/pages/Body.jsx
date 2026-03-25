@@ -70,7 +70,7 @@ const Body = () => {
         >
           <Link
             to="/shop"
-            className="bg-secondgreen transition hover:!text-[#014C2E] active:text-[#014C2E] md:active:text-white md:py-4 cursor-pointer text-white md:p-3 px-6 md:px-12 text-lg rounded-md shadow-md shadow-gray-900  hover-fill-from-bottom2 "
+            className="bg-secondgreen transition hover:!text-secondprimary active:text-secondprimary md:active:text-white md:py-4 cursor-pointer text-white md:p-3 px-6 md:px-12 text-lg rounded-md shadow-md shadow-gray-900 hover-fill-from-bottom2"
           >
             Let's Shop
           </Link>

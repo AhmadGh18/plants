@@ -20,11 +20,11 @@ const ProductCard = ({ product }) => {
           {product.description}
         </p>
         <div className="flex items-center justify-between">
-          <div className="text-green-700 font-bold">{product.price}</div>
+          <div className="text-primary font-bold">{product.price}</div>
           <div className="flex gap-2">
             <Link
               to={`/plant/${product.id}`}
-              className="text-sm px-3 py-1 border rounded hover:bg-green-50"
+              className="text-sm px-3 py-1 border rounded hover:bg-secondgreen/10"
             >
               View
             </Link>

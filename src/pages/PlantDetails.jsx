@@ -59,7 +59,7 @@ const PlantDetails = () => {
 
           <div className="md:w-1/2">
             <h1 className="text-3xl font-bold mb-2">{plant.title}</h1>
-            <p className="text-xl text-green-700 font-semibold mb-4">
+            <p className="text-xl text-primary font-semibold mb-4">
               {plant.price}
             </p>
             <p className="mb-6 text-neutral-700">{plant.description}</p>

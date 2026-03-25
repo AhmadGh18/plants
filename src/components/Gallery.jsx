@@ -38,7 +38,7 @@ const Gallery = () => {
               />
               <div className="p-4 text-center">
                 <h3 className="text-lg font-semibold">{item.title}</h3>
-                <p className="text-green-700 font-medium">{item.price}</p>
+                <p className="text-primary font-medium">{item.price}</p>
               </div>
             </Link>
           </motion.div>

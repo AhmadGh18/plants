@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import logo from "../assets/images/fflogo.png";
+import logo from "../assets/images/sitelogo.png";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Navbar = ({ isblack, isfixed }) => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -21,26 +22,33 @@ const Navbar = ({ isblack, isfixed }) => {
 
   return (
     <nav
-      className={`w-full ${isfixed ? "fixed" : "relative"} top-0 left-0 z-50 transition-colors duration-500 ${
-        isblack || scrolled
-          ? "bg-black text-white"
-          : "bg-transparent text-black md:text-white"
-      }`}
+      className={`w-full  ${
+        isfixed ? "fixed" : "relative"
+      }  top-0 left-0 z-50 transition-colors duration-500 ${
+        scrolled
+          ? `bg-black ${
+              isblack && "bg-black"
+            }  md:text-white text-black shadow-md`
+          : ` ${
+              isblack ? "bg-black" : "bg-transparent"
+            } md:text-white text-blac`
+      } ${isblack && "bg-black"}`}
     >
+      {" "}
       <div className="flex items-center justify-between py-4 px-6 md:px-12">
-        <img src={logo} alt="Logo" className="h-16 object-contain" />
+        <img src={logo} alt="Logo" className="h-24  object-contain" />
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex gap-8 text-lg font-semibold items-center">
+        <div className="hidden md:flex gap-8 text-lg font-semibold   items-center !text-black md:!text-white ">
           <a href="#" className="hover:text-primary transition">
             Home
           </a>
           <a href="#" className="hover:text-primary transition">
             About
           </a>
-          <a href="#" className="hover:text-primary transition">
-            Products
-          </a>
+          <Link to="/shop" className="hover:text-primary transition">
+            Shop
+          </Link>
           <a href="#" className="hover:text-primary transition">
             Contact
           </a>
@@ -51,36 +59,40 @@ const Navbar = ({ isblack, isfixed }) => {
 
         {/* Mobile Hamburger Icon */}
         <div className="md:hidden text-2xl cursor-pointer" onClick={toggleMenu}>
-          {menuOpen ? <FaTimes /> : <FaBars />}
+          {menuOpen ? (
+            <FaTimes className="text-white" />
+          ) : (
+            <FaBars className="text-white" />
+          )}
         </div>
       </div>
       {/* Mobile Menu */}
       <div
-        className={`md:hidden flex flex-col items-center gap-4 absolute w-full overflow-hidden transition-all duration-300 ease-in-out ${
+        className={`md:hidden flex flex-col items-center gap-4  absolute bg-white !justify-center  w-full overflow-hidden transition-all duration-300 ease-in-out ${
           menuOpen ? "max-h-[500px] py-6" : "max-h-0"
-        } ${isblack || scrolled ? "bg-black" : "bg-white"}`}
+        }`}
       >
         <a
           href="#"
-          className={`py-2 text-lg font-medium hover:text-primary transition ${isblack || scrolled ? "text-white" : "text-black"}`}
+          className="py-2 text-lg font-medium hover:text-primary transition"
         >
           Home
         </a>
         <a
           href="#"
-          className={`py-2 text-lg font-medium hover:text-primary transition ${isblack || scrolled ? "text-white" : "text-black"}`}
+          className="py-2 text-lg font-medium hover:text-primary transition"
         >
           About
         </a>
-        <a
-          href="#"
-          className={`py-2 text-lg font-medium hover:text-primary transition ${isblack || scrolled ? "text-white" : "text-black"}`}
+        <Link
+          to="/shop"
+          className="py-2 text-lg font-medium hover:text-primary transition"
         >
-          Products
-        </a>
+          Shop
+        </Link>
         <a
           href="#"
-          className={`py-2 text-lg font-medium hover:text-primary transition ${isblack || scrolled ? "text-white" : "text-black"}`}
+          className="py-2 text-lg font-medium hover:text-primary transition"
         >
           Contact
         </a>
