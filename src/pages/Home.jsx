@@ -1,6 +1,5 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import BreadCrumbs from "../components/BreadCrumbs";
 import Body from "./Body";
 import Content from "../components/Services";
 import WhyUs from "../components/WhyUs";
@@ -10,8 +9,7 @@ import Contactus from "../components/Contactus";
 const Home = () => {
   return (
     <div className="overflow-x-hidden">
-      <Navbar />
-      <BreadCrumbs items={[{ label: "Home", path: "/" }]} />
+      <Navbar isblack={true} />
       <Body />
       <Content />
       <WhyUs />
